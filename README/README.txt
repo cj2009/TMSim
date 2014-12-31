@@ -16,3 +16,6 @@ palindromes of even length is included for reference (see the included
 image). Note that there are no reject states, because any unlabeled transitions
 are assumed to go to a reject state, and therefore the TM will "die" if no
 suitable transition is found at a certain state.
+
+Possible future additions: A GUI that represents a TM, with the ability to run 
+a string through it by clicking through each step.
