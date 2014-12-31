@@ -1,0 +1,67 @@
+'''
+Use these transitions to create a TM that accepts strings from the language L:
+    L = {0^n1^(n^2) | n >= 1}
+
+Example strings from this language: 01, 001111, 000111111111, etc.
+
+Copy the following lines of code into the 'Main' class and then run it.
+'''
+
+
+    # Specify the start and accept states:
+    startState = 'A'
+    acceptState = 'R'
+    
+    
+    # Define each transition as a string, like this:
+    #         t = 'stateA -> stateB X,Y,Z'
+    # where stateA and stateB are states of the TM;
+    # X is the symbol to be read and Y is the symbol to be written;
+    # Z is either L, R or S, indicating left, right or stay.
+    # See the docs from the class TMHelper for details.
+    
+    
+    
+    t1 = 'A -> B 0,$,L'
+    t2 = 'B -> B 0,0,L'
+    t3 = 'B -> B X,X,L'
+    t4 = 'B -> C _,X,R'
+    t5 = 'C -> C 0,0,R'
+    t6 = 'C -> C X,X,R'
+    t7 = 'C -> D $,0,R'
+    t8 = 'D -> A 0,0,S'
+    t9 = 'D -> E 1,1,L'
+    t10 = 'E -> E 0,0,L'
+    t11 = 'E -> F X,X,R'
+    t12 = 'F -> G 0,$,L'
+    t13 = 'G -> G X,X,L'
+    t14 = 'G -> H _,_,R'
+    t15 = 'H -> P 0,0,R'
+    t16 = 'H -> P $,0,R'
+    t17 = 'H -> I X,_,R'
+    t18 = 'P -> P 0,0,R'
+    t19 = 'P -> Q #,#,R'
+    t20 = 'Q -> Q #,#,R'
+    t21 = 'Q -> R _,_,S'
+    t22 = 'I -> I X,X,R'
+    t23 = 'I -> I 0,0,R'
+    t24 = 'I -> J $,$,R'
+    t25 = 'J -> J 0,0,R'
+    t26 = 'J -> J #,#,R'
+    t27 = 'J -> K 1,#,L'
+    t28 = 'K -> K 0,0,L'
+    t29 = 'K -> K #,#,L'
+    t30 = 'K -> L $,0,R'
+    t31 = 'L -> I 0,$,S'
+    t32 = 'L -> M #,#,L'
+    t33 = 'M -> M 0,0,L'
+    t34 = 'M -> M $,0,L'
+    t35 = 'M -> H _,_,R'
+    t36 = 'M -> N X,X,R'
+    t37 = 'N -> O 0,$,L'
+    t38 = 'O -> O X,X,L'
+    t39 = 'O -> H _,_,R'
+    
+
+    # Create a list out of these transitions:
+    transitions = [t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t20, t21, t22, t23, t24, t25, t26, t27, t28, t29, t30, t31, t32, t33, t34, t35, t36, t37, t38, t39]

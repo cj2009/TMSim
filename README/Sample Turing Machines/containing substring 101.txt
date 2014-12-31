@@ -1,0 +1,31 @@
+'''
+Use these transitions to create a TM that accepts strings from the language L:
+    L = {w | w ∈ {0,1}* and w contains the substring "101"}
+
+Copy the following lines of code into the 'Main' class and then run it.
+'''
+
+    # Specify the start and accept states:
+    startState = 'A'
+    acceptState = 'D'
+    
+    
+    # Define each transition as a string, like this:
+    #         t = 'stateA -> stateB X,Y,Z'
+    # where stateA and stateB are states of the TM;
+    # X is the symbol to be read and Y is the symbol to be written;
+    # Z is either L, R or S, indicating left, right or stay.
+    # See the docs from the class TMHelper for details.
+    
+
+    t1 = 'A -> A 0,0,R'
+    t2 = 'A -> B 1,1,R'
+    t3 = 'B -> B 1,1,R'
+    t4 = 'B -> C 0,0,R'
+    t5 = 'C -> A 0,0,R'
+    t6 = 'C -> D 1,1,R'
+    
+    
+    
+    # Create a list out of these transitions:
+    transitions = [t1, t2, t3, t4, t5, t6]
