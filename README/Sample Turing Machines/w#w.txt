@@ -1,0 +1,46 @@
+'''
+Use these transitions to create a TM that accepts strings from the language L:
+    L = {w#w | w ∈ {0,1}*}
+
+In other words, this is the language of strings where two identical strings are on either side of a # symbol. Example strings: 01#01, 10111#10111, etc.
+
+Copy the following lines of code into the 'Main' class and then run it.
+'''
+
+    # Specify the start and accept states:
+    startState = 'A'
+    acceptState = 'G'
+    
+    
+    # Define each transition as a string, like this:
+    #         t = 'stateA -> stateB X,Y,Z'
+    # where stateA and stateB are states of the TM;
+    # X is the symbol to be read and Y is the symbol to be written;
+    # Z is either L, R or S, indicating left, right or stay.
+    # See the docs from the class TMHelper for details.
+    
+
+    t1 = 'A -> B0 0,x,R'
+    t2 = 'A -> B1 1,x,R'
+    t3 = 'A -> F #,#,R'
+    t4 = 'B0 -> B0 0,0,R'
+    t5 = 'B0 -> B0 1,1,R'
+    t6 = 'B0 -> C0 #,#,R'
+    t7 = 'B1 -> B1 0,0,R'
+    t8 = 'B1 -> B1 1,1,R'
+    t9 = 'B1 -> C1 #,#,R'
+    t10 = 'C0 -> C0 x,x,R'
+    t11 = 'C0 -> D 0,x,L'
+    t12 = 'C1 -> C1 x,x,R'
+    t13 = 'C1 -> D 1,x,L'
+    t14 = 'D -> D x,x,L'
+    t15 = 'D -> E #,#,L'
+    t16 = 'E -> E 0,0,L'
+    t17 = 'E -> E 1,1,L'
+    t18 = 'E -> A x,x,R'
+    t19 = 'F -> F x,x,R'
+    t20 = 'F -> G _,_,S'
+    
+    
+    # Create a list out of these transitions:
+    transitions = [t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t20]

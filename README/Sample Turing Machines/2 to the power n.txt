@@ -1,0 +1,36 @@
+'''
+Use these transitions to create a TM that accepts strings from the language L:
+    L = {0^(2^n) | n >= 0}
+
+Example strings: 0, 00, 0000, 00000000, etc.
+
+Copy the following lines of code into the 'Main' class and then run it.
+'''
+
+
+    # Specify the start and accept states:
+    startState = 'A'
+    acceptState = 'G'
+    
+    # Define each transition as a string, like this:
+    #         t = 'stateA -> stateB X,Y,Z'
+    # where stateA and stateB are states of the TM;
+    # X is the symbol to be read and Y is the symbol to be written;
+    # Z is either L, R or S, indicating left, right or stay.
+    # See the docs from the class TMHelper for details.
+    
+    t1 = 'A -> B 0,_,R'
+    t2 = 'B -> B x,x,R'
+    t3 = 'B -> C 0,x,R'
+    t4 = 'B -> G _,_,S'
+    t5 = 'C -> C x,x,R'
+    t6 = 'C -> D 0,0,R'
+    t7 = 'C -> E _,_,L'
+    t8 = 'D -> D x,x,R'
+    t9 = 'D -> C 0,x,R'
+    t10 = 'E -> E 0,0,L'
+    t11 = 'E -> E x,x,L'
+    t12 = 'E -> B _,_,R'
+    
+    # Create a list out of these transitions:
+    transitions = [t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12]
