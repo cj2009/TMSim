@@ -1,4 +1,4 @@
-This is small Python project I made while taking a Theory of Computation class. 
+This is a small Python project I made while taking a Theory of Computation class. 
 When first learning how to build Turing Machines, students always have an 
 element of doubt about the correctness of their TMs, especially for TMs that 
 recognize complicated languages. I created this project in order to be able to 
